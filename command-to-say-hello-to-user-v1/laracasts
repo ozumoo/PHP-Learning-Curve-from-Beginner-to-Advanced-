@@ -1,0 +1,29 @@
+#! /usr/bin/env php
+
+<?php
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Output\OutputInterface ;
+
+require 'vendor/autoload.php';
+
+//Console Description =-= Version Number
+$app = new Application('Laracasts Demo','1.0');
+
+//Register Command ex  ./file sayHelloTo
+$app->register('sayHelloTo')
+	//set description to command
+	->setDescription('Offer a greeting to the given user')
+	// argument that will be passed after command  ex ./file sayHelloTo name
+	->addArgument('name',InputArgument::OPTIONAL,'Your Name')
+	// code that will be excuted , closure for [input | output ]
+	->setCode(function(InputInterface $input,OutputInterface $output){
+		//access the argument name give as input for user + message that will be printed
+		$message = "Hello , ".$input->getArgument('name');
+
+		$output->writeln("<info>{$message}</info>");
+	});
+//excute command
+$app->run();
