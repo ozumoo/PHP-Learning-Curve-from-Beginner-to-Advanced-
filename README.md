@@ -9,6 +9,7 @@ A List of Projects to Learn PHP by Date :
 | Date                     | Title                                                           | Tags                         |
 |:------------------------ |:--------------------------------------------------------------- | ----------------------------:|
 |[2018-07-29](./2018-07-29)|using Symfony Console to make a command line to sayHelloTo proce |`symfony` `cmd`               |
+|[2018-08-02](./2018-08-02)|Symfony Console to make a command line to sayHelloTo OO  Way     |`symfony` `cmd`  `OOP`        |
 
 
 
