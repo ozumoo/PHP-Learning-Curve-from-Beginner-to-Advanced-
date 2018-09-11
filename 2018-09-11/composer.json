@@ -1,0 +1,16 @@
+{
+	"require" : {
+
+	},
+	"require-dev" : {
+		"phpunit/phpunit": "5.1.3"
+	},
+	 "conflict": {
+        "phpunit/php-timer": ">=2",
+    },
+	"autoload": {
+        "psr-0": {
+            "phpUnitTutorial": ""
+        }
+    }
+}
